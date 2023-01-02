@@ -48,7 +48,7 @@ function changeElements(array) {
                 console.log('Is NaN');
             }
         }
-        moneyNumber = Math.round(moneyNumber);
+        peopleName.money = Math.round(moneyNumber);
         // console.log(moneyNumber);
         // console.log(peopleName);
 
@@ -57,12 +57,12 @@ function changeElements(array) {
             children.name = children.name.toUpperCase();
             // console.log(children.name);
         }
-        peopleName.children.push({ name: 'Stepan' });
-
-        let randomAge = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-        peopleName.children.push({age: Math.floor(Math.random() * randomAge.length)});
+      
+      let randomAge = 18;
+      
+      peopleName.children.push({ name: 'Stepan', age: Math.floor(Math.random() * randomAge)});
         
-        console.log(peopleName);
+      console.log(peopleName);
     }
 
 }
