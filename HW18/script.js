@@ -1,4 +1,5 @@
 
+
 let users = [
 {
 "index": 0,
@@ -64,30 +65,34 @@ function usersBalance(element) {
     let moreThan2000 = element.balance;
     moreThan2000 = Number(moreThan2000.replace('$', '').replace(',', ''));
 
-    if (moreThan2000 > 2000) {
-        
-        filteredBalances.push(element);
-        return filteredBalances;
-    }
-    
+    return moreThan2000 > 2000;
+     
 }
-
+    
 filteredBalances = users.filter(usersBalance);
 
+
 function onlyNumbers(item) {
-        return item.phone;
-    }
-    console.log(filteredBalances.map(onlyNumbers));
+
+    return item.phone;
+}
+    
+console.log(filteredBalances.map(onlyNumbers));
+
+
+function returnWithout$(element) {
+    return Number(element.balance.replace('$', '').replace(',', ''));
+}
+const balanceNumber = users.map(returnWithout$);
 
 
 function summBallance(accum, user) {
-
-    let moreThan2000 = user.balance;
-    moreThan2000 = Number(moreThan2000.replace('$', '').replace(',', ''));
     
-    return accum + moreThan2000;
+    return accum + user;
 }
-const summOfBall = users.reduce(summBallance, 0);
-console.log(+summOfBall.toFixed(2))
+
+const summOfBall = balanceNumber.reduce(summBallance, 0);
+console.log(+summOfBall.toFixed(2));
+
 
 
