@@ -4,7 +4,7 @@ const getPokemons = () => {
         .then(res => showPokemons(res.results))
 }
 getPokemons()
-
+//
 const container = document.createElement('div');
 container.style.display = 'flex';
 container.style.flexWrap = 'wrap'
