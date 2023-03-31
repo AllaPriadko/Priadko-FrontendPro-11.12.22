@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #61dafb;
+  
+}
+.Left-Nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  
+}
+.Left-Nav-List {
+  width: 150px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 20px 30px 20px 0;
+  border-bottom: 1px solid black;
+}
+.Flex{
+  display: flex;
+  flex-direction: row;
+}
+
+.Main-Div {
+  padding: 20px;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
